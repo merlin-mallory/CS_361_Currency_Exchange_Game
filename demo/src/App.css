@@ -10,6 +10,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    width: 5%;
+    height: auto;
   }
 }
 
@@ -22,6 +24,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-link {

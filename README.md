@@ -1,3 +1,6 @@
+# For the grader
+cd into "splitpane-react", and then run "npm install" and "npm start".
+
 # Currency Exchange Game
 
 Learn how to play in less than 5 minutes!

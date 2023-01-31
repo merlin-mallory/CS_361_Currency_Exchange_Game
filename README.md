@@ -1,5 +1,5 @@
-# How to run this app
-cd into the "splitpane-react" folder, and then run "npm install" and "npm start".
+# How to run this app (v1.0)
+run "npm install", and then cd into the "splitpane-react" folder, and then run "npm start".
 
 # Currency Exchange Game
 

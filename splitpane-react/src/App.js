@@ -30,7 +30,7 @@ const quotes = [
   },
 ];
 
-function App() {
+function Slider() {
   const [currQuote, setCurrQuote] = useState(1);
 
   return (
@@ -40,8 +40,8 @@ function App() {
             <SplitPaneLeft>
               <SplitPane className="split-pane-col">
                 <SplitPaneTop />
-                <Divider className="separator-row" />
-                <SplitPaneBottom />
+                {/* <Divider className="separator-row" />
+                <SplitPaneBottom /> */}
               </SplitPane>
             </SplitPaneLeft>
             <Divider className="separator-col" />
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default Slider;

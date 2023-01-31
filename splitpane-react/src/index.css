@@ -7,12 +7,12 @@ body {
 .App {
   font-family: "Segoe UI", sans-serif;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   min-height: 40vh;
 }
 
 .split-pane-col {
-  width: 100vw;
+  /* width: 50vw; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,10 @@ body {
   padding: 2%;
 }
 
+.split-pane-top {
+  text-align: justify;
+}
+
 .separator-col {
   border: 5px solid black;
   cursor: col-resize;
@@ -55,7 +59,7 @@ body {
   cursor: row-resize;
 }
 
-ul {
+/* ul {
   margin-left: -2%;
 }
 
@@ -72,9 +76,9 @@ ul a {
 
 ul a:hover {
   color: black;
-}
+} */
 
-blockquote {
+/* blockquote {
   border-left: 10px solid #ccc;
   margin: 5.5em 0 0 0;
   quotes: "\201C""\201D""\2018""\2019";
@@ -103,4 +107,4 @@ blockquote p {
 
 .quote span {
   font-weight: bold;
-}
+} */

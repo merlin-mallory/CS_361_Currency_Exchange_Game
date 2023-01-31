@@ -1,5 +1,5 @@
-# For the grader
-cd into "splitpane-react", and then run "npm install" and "npm start".
+# How to run this app
+cd into the "splitpane-react" folder, and then run "npm install" and "npm start".
 
 # Currency Exchange Game
 

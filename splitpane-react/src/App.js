@@ -1,57 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
-// import styled from "styled-components"
+import SplitPane, {
+  Divider,
+  SplitPaneBottom,
+  SplitPaneLeft,
+  SplitPaneRight,
+  SplitPaneTop,
+} from "./SplitPane";
+import QuoteContext from "./QuoteContext";
+import { useState } from "react";
+
+import "./App.css";
+
+const quotes = [
+  {
+    id: 1,
+    author: "Nelson Mandela",
+    description:
+      "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+  },
+  {
+    id: 2,
+    author: "Walt Disney",
+    description: "The way to get started is to quit talking and begin doing.",
+  },
+  {
+    id: 3,
+    author: "Oprah Winfrey",
+    description:
+      "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+  },
+];
 
 function App() {
+  const [currQuote, setCurrQuote] = useState(1);
+
   return (
-    <div className="App">
-      <Header />
-      <Body />
-      <Footer />
-    </div>
+      <div className="App">
+        <QuoteContext.Provider value={{ quotes, currQuote, setCurrQuote }}>
+          <SplitPane className="split-pane-row">
+            <SplitPaneLeft>
+              <SplitPane className="split-pane-col">
+                <SplitPaneTop />
+                <Divider className="separator-row" />
+                <SplitPaneBottom />
+              </SplitPane>
+            </SplitPaneLeft>
+            <Divider className="separator-col" />
+
+            <SplitPaneRight />
+          </SplitPane>
+        </QuoteContext.Provider>
+      </div>
   );
-}
-
-function Header() {
-  return (
-    <header className="App-header">
-        <h1>Currency Exchange Game</h1>
-        <h3>Learn how to play in less than 5 minutes!</h3>
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-  )
-}
-
-function Body() {
-  return(
-    <div>
-      <button type="button" onClick={clickMe}>Sign Up!</button>
-    </div>
-      
-  )
-}
-
-function clickMe() {
-  alert('You clicked me!');
-};
-
-function Footer() {
-  return (
-    <footer className="App-footer">
-        Made with <img src={logo} className="App-logo" alt="logo" />
-        © Merlin Mallory, 2023
-      </footer>
-  )
 }
 
 export default App;

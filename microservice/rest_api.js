@@ -1,7 +1,7 @@
-const express = require("express");
+import express from 'express';
 const app = express();
 
-let bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 app.use(bodyParser.json());
 
 // Generates random floats for each currency
@@ -13,10 +13,10 @@ async function numGenerator(currencies) {
     return currencies
 }
 
-// Handles incoming GET requests. 
+// Handles incoming PUT requests. 
 // Calls the numGenerator function, passing in the JSON object in the request 
 // Returns randomized floats in JSON 
-app.get("/rates", (req, res) => {
+app.put("/rates", (req, res) => {
     numGenerator(req.body)
         .then(currencies => {
             res.status(201).json(currencies)

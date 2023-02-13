@@ -1,5 +1,5 @@
-### Example GET request with 4 currencies and corresponding floats 
-GET http://localhost:3000/rates HTTP/1.1
+### Example PUT request with 4 currencies and corresponding floats 
+PUT http://localhost:3000/rates HTTP/1.1
 content-type: application/json
 
 {

@@ -1,0 +1,10 @@
+### Example GET request with 4 currencies and corresponding floats 
+GET http://localhost:3000/rates HTTP/1.1
+content-type: application/json
+
+{
+    "USD": 0.01,
+    "EUR": -0.02,
+    "JPY": -0.01,
+    "CAD": 0.02
+}

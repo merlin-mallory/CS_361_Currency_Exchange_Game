@@ -9,6 +9,7 @@ For example, I've written a separate program in example_call.js that contains th
 <img width="354" alt="fetchcall" src="https://user-images.githubusercontent.com/86948190/218544779-ea6b3968-e977-4cdc-beac-f1798505173c.PNG">
 
 * How to receive data: 
+
 Simply use and manipulate the "response object" returned by the fetch call. The randomized floats should be returned in JSON. 
 You can add code following the fetch() call that gets the text content of the http response and displays it on the console like so: 
 

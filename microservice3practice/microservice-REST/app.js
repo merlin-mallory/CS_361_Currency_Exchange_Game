@@ -33,7 +33,7 @@ async function pickAnime(receivedAnime) {
     return pickedAnimeArr
 }
 
-app.get("/pick", (req, res) => {
+app.put("/pick", (req, res) => {
     console.log("Pick is called!")
     pickAnime(req.body)
         .then(pickedAnimeArr => {

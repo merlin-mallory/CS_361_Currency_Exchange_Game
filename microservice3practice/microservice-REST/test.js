@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+// import fetch from "node-fetch"
 
 const example = [
     {title: "One Piece", visual: "Visual1"},
@@ -13,8 +13,8 @@ const example = [
     {title: "Hunter X Hunter", visual: "Visual10"}
 ]
 
-fetch('http://localhost:3000/rates', {
-    method: 'GET',
+fetch('http://localhost:3000/pick', {
+    method: 'PUT',
     body: JSON.stringify(example),
     headers: {
         'Content-Type': 'application/json',

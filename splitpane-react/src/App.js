@@ -89,6 +89,11 @@ const quotes = [
   }
 ];
 
+let currencyBeforeAdj = {}
+let currencyAdj = {}
+let currencyAfterAdj = {}
+
+
 function Slider() {
   const [currQuote, setCurrQuote] = useState(1);
 

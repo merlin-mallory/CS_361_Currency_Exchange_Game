@@ -57,3 +57,9 @@ function adjustRates(currencyArr, currencyAdj) {
     }
     console.log("currencyAfterAdj within adjustRates:", currencyAfterAdj)
 }
+
+app.get('/currencyAfterAdj', (req, res) => {
+    fetchAsync().then(currencyAfterAdj => {
+        res.send(currencyAfterAdj)
+        })
+    })

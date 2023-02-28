@@ -4,6 +4,7 @@ import './index.css';
 import Slider from './App';
 import Header from './header';
 import Body from './signupButton';
+import Simulator from './exchangeRateSimulator'
 import Footer from './footer';
 import reportWebVitals from './reportWebVitals';
 
@@ -11,8 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <Simulator />
     <Slider />
-    {/* <Body /> */}
     <Footer />
   </React.StrictMode>
 );

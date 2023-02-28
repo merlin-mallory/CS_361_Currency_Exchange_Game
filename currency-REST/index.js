@@ -31,7 +31,7 @@ let currencyAfterAdj = {
 }
 
 async function fetchAsync(){
-    let response = await (fetch('http://localhost:3000/rates', {
+    let response = await (fetch('http://localhost:3001/rates', {
         method: 'PUT',
         body: JSON.stringify(currencyArr),
         headers: {

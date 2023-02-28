@@ -5,6 +5,7 @@ import SplitPane, {
   SplitPaneRight,
   SplitPaneTop,
 } from "./SplitPane";
+import React from 'react'
 import QuoteContext from "./QuoteContext";
 import { useState } from "react";
 

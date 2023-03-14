@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Slider from './App';
-import Header from './header';
+import Slider from './TutorialPage';
+import Header from './WelcomePage';
 import Body from './signupButton';
 import Simulator from './exchangeRateSimulator'
 import Footer from './footer';
 import reportWebVitals from './reportWebVitals';
+import SignUpButton from './signupButton';
+import TutorialButton from './tutorialButton';
+import Pitch from './PitchPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <Simulator />
+    <Pitch />
     <Slider />
+    <center><Simulator /></center>
     <Footer />
   </React.StrictMode>
 );

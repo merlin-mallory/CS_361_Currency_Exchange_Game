@@ -1,17 +1,20 @@
-const express = require('express')
-const bodyParser = require('body-parser')
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-const app = express()
-app.use(bodyParser.json())
+const app = express();
 
-const PORT = 3003
+app.use(bodyParser.json());
+app.use(cors()); // enable CORS
+
+const PORT = 3003;
+
 app.listen(PORT, (error) =>{
-	if(!error)
-		console.log("Controller is running, listening on port "+ PORT)
-	else
-		console.log("Error occurred, controller can't start", error)
-	}
-)
+    if(!error)
+        console.log("Controller is running, listening on port "+ PORT);
+    else
+        console.log("Error occurred, controller can't start", error);
+});
 
 let currencyArr  = {
     "EUR": 0.94,
@@ -21,8 +24,7 @@ let currencyArr  = {
 
 console.log("Starting arr:", currencyArr)
 
-let currencyAdj = {
-}
+let currencyAdj = {}
 
 let currencyAfterAdj = {
     "EUR": 0.94,
@@ -42,8 +44,8 @@ async function fetchAsync(){
 
     let currencyAdj = await response.json()
     console.log("Here's the data from the microservice:", currencyAdj)
-    adjustRates(currencyArr, currencyAdj)
-    return currencyAfterAdj
+    result = adjustRates(currencyArr, currencyAdj)
+    return result
 }
 
 fetchAsync()
@@ -56,6 +58,7 @@ function adjustRates(currencyArr, currencyAdj) {
         currencyAfterAdj[currency] = currencyAdj[currency] + currencyArr[currency]
     }
     console.log("currencyAfterAdj within adjustRates:", currencyAfterAdj)
+    return currencyAfterAdj
 }
 
 app.get('/currencyAfterAdj', (req, res) => {

@@ -2,7 +2,7 @@ import './App.css';
 
 function SignUpButton() {
     function clickMe() {
-        alert('You clicked me!');
+        alert('You clicked me to signup!');
       };
 
     return(

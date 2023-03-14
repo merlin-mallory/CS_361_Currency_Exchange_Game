@@ -1,92 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import './App.css';
+import React, { useState } from 'react';
 
-function Simulator() {
-    const [currencies, setCurrencies] = useState({})
-    // const navigate = useNavigate()
+function CurrencyList() {
 
-    function clickMe2() {
+  const [currencyValues, setCurrencyValues] = useState({
+    "EUR": 0,
+    "JPY": 0,
+    "CAD": 0
+  });
 
-        
-        alert('You clicked me!');
-      };
-
-    return (
-    <div className="App-simulator">
-        <h3>Currency Change Simulator</h3>
-        <table id="currenciesBefore">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Value Before Simulation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>EUR</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>JPY</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>CAD</th>
-                    <th>?</th>
-                </tr>
-            </tbody>
-        </table>
-        <table id="currencyChangeAmount">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Simulated Price Change</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>EUR</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>JPY</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>CAD</th>
-                    <th>?</th>
-                </tr>
-            </tbody>
-        </table>
-        <table id="currenciesAfter">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Value After Simulation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>EUR</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>JPY</th>
-                    <th>?</th>
-                </tr>
-                <tr>
-                    <th>CAD</th>
-                    <th>?</th>
-                </tr>
-            </tbody>
-        </table>
-        <button type="button" onClick={clickMe2} className="ChangeRatesButton">Change rates</button>
-        <p>end</p>
-    </div>
-    )
+  const updateCurrencyValues = () => {
+    fetch('http://localhost:3003/currencyAfterAdj')
+      .then(response => response.json())
+      .then(data => setCurrencyValues(data));
   }
 
-  export default Simulator;
+  return (
+    <div>
+      <h2>Currency Change Simulator</h2>
+      <ul>
+        {Object.keys(currencyValues).map(key => (
+          <li key={key}>{key}: {currencyValues[key]}</li>
+        ))}
+      </ul>
+      <button onClick={updateCurrencyValues}>Update</button>
+    </div>
+  );
+}
+
+export default CurrencyList;

@@ -1,3 +1,7 @@
+// Citation: This component was based upon this tutorial from LogRocket:
+// https://blog.logrocket.com/how-to-create-a-split-pane-component-in-react/
+
+
 import React, {
     createRef,
     useContext,
@@ -7,6 +11,8 @@ import React, {
   } from "react";
   import QuoteContext from "./QuoteContext";
   import SplitPaneContext from "./SplitPaneContext";
+
+  let counter = 0
   
   const SplitPane = ({ children, ...props }) => {
     const [clientHeight, setClientHeight] = useState(null);
@@ -101,7 +107,11 @@ import React, {
     }, [clientHeight]);
   
     function clickMe() {
-        alert('You clicked me!');
+        counter = counter + 1
+        if (counter == 7) {
+          counter = 6
+        }
+        setCurrQuote(quotes[counter].id)
       };
 
     return (

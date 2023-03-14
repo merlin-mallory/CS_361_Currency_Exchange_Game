@@ -59,6 +59,7 @@ const quotes = [
     author: "5",
     description:
       "Exchange rates update daily at midnight PST. \
+      Click the Change Rates button below, to see an example! \
       But let's simulate a price change for this tutorial! \
       You currently have 1000 USD, and 100,000 YEN worth 766.92 USD in his wallet. \
       Your wallet total is $1,858.92. Click this button to simulate one day of price changes. \

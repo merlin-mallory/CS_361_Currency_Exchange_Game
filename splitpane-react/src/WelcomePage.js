@@ -1,11 +1,10 @@
 import './App.css';
-import Simulator from './exchangeRateSimulator';
 
 function Header() {
 
     return (
       <header className="App-header">
-          <h1>Currency Exchange Game Tutorial</h1>
+          <h1>Currency Exchange Game</h1>
           <p>
             Practice currency trading for free, with no risk of losing your own money!
           </p>

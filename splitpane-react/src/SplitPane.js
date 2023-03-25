@@ -109,7 +109,7 @@ import React, {
     function clickMe() {
         counter = counter + 1
         if (counter == 7) {
-          counter = 6
+          counter = 0
         }
         setCurrQuote(quotes[counter].id)
       };

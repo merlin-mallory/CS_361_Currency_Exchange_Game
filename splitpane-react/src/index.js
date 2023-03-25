@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Slider from './TutorialPage';
 import Header from './WelcomePage';
-import Body from './signupButton';
 import Simulator from './exchangeRateSimulator'
 import Footer from './footer';
 import reportWebVitals from './reportWebVitals';
-import SignUpButton from './signupButton';
-import TutorialButton from './tutorialButton';
 import Pitch from './PitchPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

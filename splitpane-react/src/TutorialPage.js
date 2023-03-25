@@ -85,7 +85,7 @@ const quotes = [
     author: "7",
     description:
       "Congratulations on completing the tutorial! \
-      Sign up now to get your $100,000 and start playing right away!",
+      Click the 'Sign Up!' button above to get your $100,000 and start playing right away!",
     title: "Tutorial complete!"
   }
 ];
